@@ -1,18 +1,28 @@
-const totalImages = 500; 
-const images = [];
-
-for (let i = 1; i <= totalImages; i++) {
-  images.push(`images/img${i}.jpg`);
+// Función para mezclar el array
+function shuffle(array) {
+  return array.sort(() => Math.random() - 0.5);
 }
 
-images.sort(() => 0.5 - Math.random());
+// Crear lista de imágenes dinámicas
+const images = [];
 
-const selected = images.slice(0, 9);
+for (let i = 1; i <= 30; i++) {
+  images.push(`https://picsum.photos/600?random=${i}`);
+}
 
-const grid = document.getElementById("photoGrid");
+// Mezclar imágenes
+const shuffled = shuffle(images);
 
+// Tomar solo 9
+const selected = shuffled.slice(0, 9);
+
+// Buscar el contenedor del grid
+const grid = document.getElementById("photo-grid");
+
+// Insertar imágenes en el HTML
 selected.forEach(src => {
   const img = document.createElement("img");
   img.src = src;
+  img.alt = "Artwork";
   grid.appendChild(img);
 });
