@@ -8,20 +8,22 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin: 80px auto;
+  gap: 18px; /* menos espacio */
+  margin-top: 50px;
 }
 
 .grid img {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  height: 200px;
-  transition: 0.4s;
-.grid img:hover {
-  transform: scale(1.02);
-  opacity: 0.8;
+  border: 1px solid #e5e5e5; /* borde fino elegante */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* sombra suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.grid img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 nav {
