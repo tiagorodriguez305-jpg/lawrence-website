@@ -1,6 +1,8 @@
 body {
   font-family: Arial, sans-serif, Playfair Display;
   text-align: center;
+  background-color: #f5f1eb;
+  color: #333333;
 }
 
 .grid {
